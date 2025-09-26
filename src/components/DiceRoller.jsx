@@ -251,13 +251,13 @@ Total Rolls: ${results.stats.total}`;
   };
 
   return (
-    <div className="max-w-6xl mx-auto p-6 bg-white">
+    <div className="max-w-6xl mx-auto p-6 bg-white text-gray-900">
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900 mb-2 flex items-center gap-2">
           <Dice6 className="text-blue-600" />
           Dice Roller
         </h1>
-        <p className="text-gray-600">Roll multiple dice, see the results, and analyze the data</p>
+        <p className="text-gray-700">Roll multiple dice, see the results, and analyze the data</p>
       </div>
 
       {/* Controls */}
@@ -293,7 +293,7 @@ Total Rolls: ${results.stats.total}`;
         {/* Speed Control (only show in animate mode) */}
         {animateMode && (
           <div className="mb-4">
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-gray-800 mb-2">
               Animation Speed: {speed} rolls/second
             </label>
             <input
@@ -310,7 +310,7 @@ Total Rolls: ${results.stats.total}`;
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-end">
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-gray-800 mb-2">
               Number of Dice
             </label>
             <input
@@ -330,7 +330,7 @@ Total Rolls: ${results.stats.total}`;
           </div>
           
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-gray-800 mb-2">
               Number of Rolls
             </label>
             <input
@@ -374,7 +374,7 @@ Total Rolls: ${results.stats.total}`;
           </div>
           {currentDiceValues.length > 0 && (
             <div className="text-center mt-4">
-              <span className="text-lg font-semibold text-gray-700">
+              <span className="text-lg font-semibold text-gray-900">
                 Sum: {currentDiceValues.reduce((a, b) => a + b, 0)}
               </span>
             </div>
@@ -385,7 +385,7 @@ Total Rolls: ${results.stats.total}`;
       {/* Warning for too many dice */}
       {animateMode && numDice > 20 && (
         <div className="bg-yellow-50 border border-yellow-200 p-4 rounded-lg mb-6">
-          <p className="text-yellow-800">
+          <p className="text-yellow-900">
             <strong>Note:</strong> Visual dice animation is limited to 20 dice for performance. 
             Your results will still show all {numDice} dice, but the animation is disabled.
           </p>
